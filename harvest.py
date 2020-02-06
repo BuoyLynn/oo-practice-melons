@@ -97,8 +97,7 @@ def make_melon_type_lookup(melon_types):
 class Melon(MelonType):
     """A melon in a melon harvest."""
 
-    # Fill in the rest
-    # Needs __init__ and is_sellable methods
+    # Might need some default args used in parent as we only implement 'code' from parent
     def __init__(self, shape_rate, color_rate, harvested_from, harvested_by):
         """Initialize a melon."""
         # inherits self.code from parent class MelonType
@@ -118,7 +117,33 @@ def make_melons(melon_types):
 
     melons = []
 
-    # loop goes here
+    # melon = MelonType(code, shape_rate, color_rate, harvested_from, harvested_by)
+    melon1 = Melon('yw', 8, 7, 'Field 2', 'Shiela')
+    melons.append(melon1)
+
+    melon2 = Melon('yw', 3, 4, 'Field 2', 'Shiela')
+    melons.append(melon2)
+
+    melon3 = Melon('yw', 9, 8, 'Field 3', 'Shiela')
+    melons.append(melon3)
+
+    melon4 = Melon('cas', 10, 6, 'Field 35', 'Shiela')
+    melons.append(melon4)
+
+    melon5 = Melon('cren', 8, 9, 'Field 35', 'Michael')
+    melons.append(melon5)
+
+    melon6 = Melon('cren', 8, 2, 'Field 35', 'Michael')
+    melons.append(melon6)
+
+    melon7 = Melon('cren', 2, 3, 'Field 4', 'Michael')
+    melons.append(melon7)
+
+    melon8 = Melon('musk', 6, 7, 'Field 4', 'Michael')
+    melons.append(melon8)
+
+    melon9 = Melon('yw', 7, 10, 'Field 3', 'Shiela')
+    melons.append(melon9)
 
     return melons
 
