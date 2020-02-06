@@ -116,10 +116,19 @@ class Melon(MelonType):
 def make_melons(melon_types):
     """Returns a list of Melon objects."""
 
-    # Fill in the rest
+    melons = []
+
+    # loop goes here
+
+    return melons
 
 
 def get_sellability_report(melons):
     """Given a list of melon object, prints whether each one is sellable."""
 
-    # Fill in the rest
+    for melon in melons:
+
+        if melon.is_sellable:
+            print(f"Harvested by {melon.harvested_by} from {melon.harvested_from} (CAN BE SOLD)")
+        else:
+            print(f"Harvested by {melon.harvested_by} from {melon.harvested_from} (NOT SELLABLE)")
