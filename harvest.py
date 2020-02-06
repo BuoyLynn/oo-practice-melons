@@ -55,7 +55,7 @@ def make_melon_types():
 
     # import pdb; pdb.set_trace()
 
-    return all_melon_types  
+    return all_melon_types
 
 def print_pairing_info(melon_types):
     """Prints information about each melon type's pairings."""
@@ -71,8 +71,24 @@ def print_pairing_info(melon_types):
 
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
+    melon_dictionary = {}
+    code_key_list = []
 
-    # Fill in the rest
+    for melon in melon_types:
+        attribute_value_list = []
+
+        code_key_list.append(melon.code)
+
+        attribute_value_list.append(melon.name)
+        attribute_value_list.append(melon.first_harvest)
+        attribute_value_list.append(melon.pairings)
+        attribute_value_list.append(melon.is_seedless)
+        attribute_value_list.append(melon.is_bestseller)
+
+        for code in code_key_list:
+            melon_dictionary.setdefault(code, attribute_value_list)
+
+    return melon_dictionary
 
 ############
 # Part 2   #
